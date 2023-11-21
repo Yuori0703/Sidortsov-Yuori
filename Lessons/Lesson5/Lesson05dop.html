@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Анкета </title>
+</head>
+
+<body  >
+    <h1 align="center"> Заполните анкету</h1>
+    <form action="http://fe.it-academy.by/TestForm.php" name="form1 " method="get">
+        <fieldset>
+            <legend>Личные данные</legend>
+                <p> <input  type="text" required placeholder="Фамилия" size="25" autofocus pattern="^[а-яА-ЯёЁ]+$" name="n1">
+                text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле <br>
+                <input type="text"  size="20" required placeholder="Имя" pattern="^[а-яА-ЯёЁ]+$" name="n2">
+            text: Только кириллица, без пробелов, длина поля 20, обязательное поле <br>
+           <input  type="text"  size="24" required placeholder="Отчество" pattern="^[а-яА-ЯёЁ]+$" name="n3"> 
+                text: Только кириллица, без пробелов, длина поля 25, обязательное поле </p>
+            
+            <fieldset>
+            <legend>Паспортные данные</legend>
+            <p>text: Серия - только заглавные две латинские буквы с длинной 2 и максимальном количестве символов 2, количество букв не менее 2,<br>
+            обязательное поле
+            text:Номер паспорта- только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле
+            </p>
+            <input type="text" size="2" maxlength="2" required placeholder="Номер" pattern="^[A-Z]+$" name="n4">
+            <input type="text" size="7" maxlength="7" required placeholder="Н пасп" pattern="[0-9]{7}" name="n5">
+            </fieldset>
+            <fieldset>
+             <legend>Дата рождения</legend>
+             <p><input type="text" size="7" maxlength="4" pattern="[0-9]{4}" name="n6">text:
+            Год рождения 4-е цифры</p>
+            <p><select name="month" id="month">
+                <option value="1">Январь</option>
+                <option value="1">Февраль</option>
+                <option value="1">Март</option>
+                <option value="1">Апрель</option>
+                <option value="1">Май</option>
+                <option value="1">Июнь</option>
+                <option value="1">Июль</option>
+                <option value="1">Август</option>
+                <option value="1">Сентябрь</option>
+                <option value="1">Октябрь</option>
+                <option value="1">Ноябрь</option>
+                <option value="1">Декабрь</option>
+                </select>select: Месяц рождения </p>
+                <p><input type="number" size="7" maxlength="2" min="1" max="31" name="n7">
+                number: Диапазон от 1 до 31 с шагом 1 </p>
+            </fieldset>
+            <p><select name="nation" id="nation" required placeholder="гражданство">
+                <option value="1"> РБ</option>
+                <option value="2"> РФ</option>
+               </select>(Национальность- выбор одного значения из списка, обязательное поле) </p>
+            <p>Адрес:</p>
+            <textarea name="adres" cols="20" rows="5" lang="rus">
+             </textarea>  
+             </fieldset>
+             <fieldset>
+                <legend>Интересы</legend>
+                <fieldset>
+                    <legend>array: Хобби</legend>
+                <p><input type="radio" name="int" value="i1" >Рыбалка</p>   
+                <p><input type="radio" name="int" value="i2" >Астрономия</p>   
+                <p><input type="radio" name="int" value="i3" >Дайвинг</p>   
+                <p><input type="radio" name="int" value="i4" >Марки</p> 
+                </fieldset>
+                <fieldset>
+                    <legend>Домашние животные(возможность выбора нескольких вариантов)</legend>
+                <p>array: select multiple</p>
+                <select multiple name="s2" id="s2" size="3">
+                <optgroup label="Попугаи">
+                    <option value="1">Волнистый</option>
+                    <option value="2">Ара</option>
+                    <option value="3">Неразлучник</option>
+                <optgroup label="Рыба">
+                    <option value="1">Караси</option>
+                    <option value="2">Окуни</option>
+                    <option value="3">Осетр</option>
+                <optgroup label="Птицы">
+                    <option value="1">Стая ворон</option>
+                    <option value="2">Аист</option>
+                    <option value="3">Археоптерикс</option>
+                 </optgroup>
+                </select>
+                </fieldset>
+             </fieldset>
+    <fieldset>
+        <legend>Данные для входа в систему и восстановление пароля</legend>
+        <p><input type="text"  size="20" required placeholder="login" pattern="[A-Za-z]{5,}" name="login">text:
+         Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле</p>
+         <p><input type="password"  size="20" required placeholder="passw" pattern="[A-Za-z]{10,}" name="passw">text:
+            Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле</p>
+    </fieldset>
+    <fieldset>
+        <legend>Координаты</legend>
+    <p><input type="mail" name="email" placeholder="введите адрес почты" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">email: проверка должна осуществляеться при помощи новых атрибутов тега &lt; input &gt; </p>
+    <p><input type="url" name="url" placeholder="введите адрес сайта" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">url: проверка должна осуществляеться при помощи новых атрибутов тега &lt; input &gt;</p>
+    </fieldset>
+    <fieldset>
+        <legend>Цифры</legend>
+        <p><input type="number" name="num" min="-2.5" max="2.5" step="0.1"> number: Диапазон от -2.5 до 2.5 с шагом 0.1</p>
+        <p><input type="range" name="rn" min="1" max="10" step="1" value="5.5"> range: Максимальное 10 минимальное 1</p>
+        
+    </fieldset>
+    <fieldset>
+        <legend>Кнопки управления</legend>
+
+        <input type="submit" name="but1" value="Отправить">
+        <input type="reset" name="but2" value="Сбросить"><br>
+       <p> <button type="button">
+            <img src="../mail.png"  width="20" height="20">
+          </button> -при нажатии этой кнопки ничего не происходит
+        </p>
+        
+    </fieldset>
+    </form>
+   
+
+    
+
+
+</body>
+
+</html>
