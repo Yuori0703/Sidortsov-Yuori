@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Первое задание </title>
+<style>
+    .doc{
+        text-indent: 20px;
+        border: 1px solid #060A13;
+        border-radius:0px 10px 0px 10px;
+
+    }
+    .word  {
+    display: inline-block; 
+    position: relative; 
+   }
+   .word:hover::after {
+    content: attr(data-title); 
+    position: absolute; 
+    left:150px; 
+    z-index: 1; 
+    background: rgba(255,255,230,0.9); 
+    font-family: Arial, sans-serif; 
+    font-size: 15px; 
+    padding: 5px 10px; 
+    border: 1px solid #333; 
+   }
+   .pdf  {
+    display: inline-block; 
+    position: relative; 
+   }
+   .pdf:hover::after {
+    content: attr(data-title); 
+    position: absolute; 
+    left:150px; 
+    z-index: 1; 
+    background: rgba(255,255,230,0.9); 
+    font-family: Arial, sans-serif; 
+    font-size: 15px; 
+    padding: 5px 10px; 
+    border: 1px solid #333; 
+   }
+   .zip  {
+    display: inline-block; 
+    position: relative; 
+   }
+   .zip:hover::after {
+    content: attr(data-title); 
+    position: absolute; 
+    left:150px; 
+    z-index: 1; 
+    background: rgba(255,255,230,0.9); 
+    font-family: Arial, sans-serif; 
+    font-size: 15px; 
+    padding: 5px 10px; 
+    border: 1px solid #333; 
+   }
+
+</style>
+</head>
+
+<body>
+    <h1>Форматы файлов</h1>
+    <p class="doc"> .Doc или .doc (от англ. <img src="../../Picture/png-transparent.png" width="15px" height="15px"><a
+            href="https://ru.wikipedia.org/wiki/Microsoft_Word">document</a> )
+        - расширение имени файла, используемое для файлов,<br> предоставляющих текст, с разметкой или без. Расширенияе
+        Doc часто использовалось для<br>
+        обозначения простых текстовых файлов без формирования,однако позже стало <br>
+        использоваться для двоичных форматов с разметкой. <br>
+        <a href="https://ru.wikipedia.org/wiki/Microsoft_Word">Документ MS Word</a><img src="../../Picture/word.png" width="15px" height="15px">
+    </p>
+    <p class="doc"> Portable Document Format (<img src="../../Picture/png-transparent.png" width="15px" height="15px">PDF<a
+            href="https://ru.wikipedia.org/wiki/Portable_Document_Format">document</a> )-межплатформенный формат электронных документов,<br>
+        разработанной фирмой Adope Sysrems с использованием ряда возможностей языка<br>
+        Postscript. <br>
+        <a href="https://ru.wikipedia.org/wiki/Portable_Document_Format">Документ PDF</a><img src="../../Picture/pdf.png" width="15px" height="15px">
+    </p>
+    <p class="doc"> ZIP - популярный формат для сжатия данных и архивации файлов. Файл в этом формате <br>
+        обычно имеет расширение <img src="../../Picture/png-transparent.png" width="15px" height="15px"><a
+        href="https://winrar-full.com/vse-arhivatory/zip-arhivatory.html">zip</a> и хранит в сжатом или не сжатом виде один или несколько <br>
+        файлов, которые можно из него извлечь путем распаковки с помощью специальной <br> программы. <br>
+        <a href="https://winrar-full.com/vse-arhivatory/zip-arhivatory.html">Архив</a><img src="../../Picture/arhiv.png" width="15px" height="15px">
+    </p>
+    <h1>Этот список файлов</h1>
+    <img src="../../Picture/doc.jpg" width="15px" height="15px"><div class="word" data-title="Документ MS Word"><a href="https://ru.wikipedia.org/wiki/Microsoft_Word">Документ MS Word</a></div> <br>
+    <img src="../../Picture/doc.jpg" width="15px" height="15px"><div class="pdf" data-title="Документ PDF"><a href="https://ru.wikipedia.org/wiki/Microsoft_Word">Документ PDF</a></div> <br>
+    <img src="../../Picture/doc.jpg" width="15px" height="15px"><div class="zip" data-title="Архив"><a href="https://ru.wikipedia.org/wiki/Microsoft_Word">Архив</a></div> 
+
+</html>
